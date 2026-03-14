@@ -44,6 +44,35 @@ Selected bit groups used by the decoder:
 </p>
 Fig2. DCF77 Bit specification, Image courtesy of brettoliver.org.uk (see [2])
 
+Fields: Year, Month, Day, Hour, Minute are BCD encoded.
+
+Below formula shows how to caclulate the value of Minute field:
+
+$$
+\text{Minute} = \sum_{i=21}^{27} b_i \cdot w_i
+$$
+
+for minute field 
+
+i = `21–27`
+
+weights $w_i$ are `[1,2,4,8,10,20,40]`
+
+assuming received bits $b_i$ are `[1 0 1 0 1 0 0]`
+
+field Minute is equal to:
+
+`minute = b21*1 + b22*2 + b23*4 + b24*8 + b25*10 + b26*20 + b27*40`
+
+`minute = 1*1 + 1*4 + 1*10 = 15`
+
+In pure BCD logic it can be said that bits `21–24` encode units digit and bits `25–27` encode tens digit.
+
+DCF77 uses even parity. For the minute field, this means that the total number of 1s in bits `21–27`, together with the parity bit (`28`), must be even.
+
+The parity bit is therefore equal to the XOR of all data bits in the field.
+In our example, the number of 1s in bits `21–27` is odd (`3`). To make the total even, the parity bit `28` must be set to `1`. If it were `0`, the frame would be rejected.
+
 ## Decoder Software Design Overview
 
 ### Layered Architecture
