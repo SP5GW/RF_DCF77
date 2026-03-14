@@ -86,6 +86,13 @@ DCF77 uses even parity. For the minute field, this means that the total number o
 The parity bit is therefore equal to the XOR of all data bits in the field.
 In our example, the number of 1s in bits `21–27` is odd (`3`). To make the total even, the parity bit `28` must be set to `1`. If it were `0`, the frame would be rejected.
 
+## Decoder Hardware Design Overview
+
+<p align="center">
+<img src="./img/DCF77_complete_and_back.jpg" width="700" height="600"/>
+</p>
+Fig4. DCF77 Receiver (see [6])
+
 ## Decoder Software Design Overview
 
 ### Layered Architecture
