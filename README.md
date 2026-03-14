@@ -1,6 +1,19 @@
 
 # DCF77 Signal Reception and Decoding
 
+DCF77 is a German longwave time and frequency standard radio station operated by the Physikalisch-Technische Bundesanstalt (PTB). Transmitting continuously on 77.5 kHz from Mainflingen near Frankfurt am Main, it provides highly accurate time and date information for radio-controlled clocks across much of Europe. The station began operation as a standard-frequency service in 1959, with time and date encoding added in 1973. Its 50 kW transmitter radiates the signal via a T-antenna with very high annual availability. 
+
+<p align="center">
+<img src="./img/dcf77_sanlage.jpg" width="450" height="350"/>
+</p>
+
+Fig1. DCF77 Transmission Site at Mainflingen, Germany.
+
+
+For more details, see Wikipedia [4] or PTB webpage [5].
+
+Live DCF77 data can be viewed at [3].
+
 ## General Description
 
 `RF_DCF77` is a standalone Python decoder for the DCF77 longwave time signal.
@@ -23,7 +36,7 @@ DCF77 transmits one bit per second and one frame per minute:
 <img src="./img/DCF77_Signal_Scheme_wolles_elektronikkiste_de.png" width="450" height="350"/>
 </p>
 
-Fig1. DCF77 signal structure. Image courtesy of Wolfgang Ewald (see [1]).
+Fig2. DCF77 signal structure. Image courtesy of Wolfgang Ewald (see [1]).
 
 The decoder expects 59 payload bits (index `0..58`) and validates parity fields:
 
@@ -42,7 +55,7 @@ Selected bit groups used by the decoder:
 <p align="center">
 <img src="./img/DCF77_Code_Brettoliver_org_uk.jpg" width="700" height="600"/>
 </p>
-Fig2. DCF77 Bit specification, Image courtesy of brettoliver.org.uk (see [2])
+Fig3. DCF77 Bit specification, Image courtesy of brettoliver.org.uk (see [2])
 
 Fields: Year, Month, Day, Hour, Minute are BCD encoded.
 
@@ -224,3 +237,9 @@ This setup filters the decoder output to show only valid timestamps, saves them 
 [1] DCF77 – Radio Controlled Clock by Wolfgang Ewald, https://wolles-elektronikkiste.de/en/dcf77-radio-controlled-clock
 
 [2] DCF77 Analyzer, https://www.brettoliver.org.uk/DCF77_ESP32_Analyzer/ESP32_DCF77_Analyzer.htm
+
+[3] Real time DCF77 data, https://dcf77logs.de/live
+
+[4] DCF77 wikipedia article, https://en.wikipedia.org/wiki/DCF77
+
+[5] Physikalisch-Technische Bundesanstalt (PTB), https://www.ptb.de/cms/en/ptb/fachabteilungen/abt4/fb-44/ag-442/dissemination-of-legal-time/dcf77.html
