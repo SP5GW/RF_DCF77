@@ -40,7 +40,7 @@ Selected bit groups used by the decoder:
 - `36..57` date block, `58` parity P3
 
 <p align="center">
-<img src="./img/DCF77_Code_Brettoliver_org_uk.jpg" width="400" height="300"/>
+<img src="./img/DCF77_Code_Brettoliver_org_uk.jpg" width="600" height="500"/>
 </p>
 Fig2. DCF77 Bit specification, Image courtesy of brettoliver.org.uk (see [2])
 
