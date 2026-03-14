@@ -132,12 +132,14 @@ class DCF77GPIOReceiver:
         active_low: bool = True,
         zero_threshold_ms: float = 150.0,
         marker_gap_s: float = 1.5,
+        min_pulse_ms: float = 50.0,
     ) -> None:
         """Store receiver configuration and initialize runtime state."""
         self.pin = pin
         self.active_low = active_low
         self.zero_threshold_ms = zero_threshold_ms
         self.marker_gap_s = marker_gap_s
+        self.min_pulse_ms = min_pulse_ms
 
         self.decoder = DCF77Decoder()
         self.pulse_start: Optional[float] = None
@@ -239,6 +241,11 @@ class DCF77GPIOReceiver:
 
         self.last_rising = now
 
+        # Reject short spikes/noise before bit classification.
+        if pulse_ms < self.min_pulse_ms:
+            print(f"Spike filtered (< {self.min_pulse_ms:.1f} ms): {pulse_ms:.1f} ms")
+            return
+
         bit = 0 if pulse_ms < self.zero_threshold_ms else 1
         # Pulse width model:
         # ~100 ms => bit 0
@@ -306,6 +313,12 @@ def parse_args(argv: List[str]) -> argparse.Namespace:
         type=float,
         default=1.5,
         help="Gap treated as minute marker in seconds (default: 1.5)",
+    )
+    parser.add_argument(
+        "--min-pulse-ms",
+        type=float,
+        default=50.0,
+        help="Ignore pulses shorter than this value in ms (default: 50)",
     )
     parser.add_argument(
         "--simulate",
@@ -420,6 +433,7 @@ def run_simulation(args: argparse.Namespace) -> int:
         active_low=not args.active_high,
         zero_threshold_ms=args.zero_threshold_ms,
         marker_gap_s=args.marker_gap_s,
+        min_pulse_ms=args.min_pulse_ms,
     )
     frame = build_simulated_frame(simulated_dt)
 
@@ -453,6 +467,7 @@ def main(argv: List[str]) -> int:
         active_low=not args.active_high,
         zero_threshold_ms=args.zero_threshold_ms,
         marker_gap_s=args.marker_gap_s,
+        min_pulse_ms=args.min_pulse_ms,
     )
 
     try:
