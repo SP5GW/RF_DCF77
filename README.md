@@ -20,7 +20,7 @@ DCF77 transmits one bit per second and one frame per minute:
 - **missing pulse in second 59** -> minute marker / frame boundary
 
 <p align="center">
-<img src="./img/DCF77_Signal_Scheme_wolles_elektronikkiste_de.png" width="250" height="150"/>
+<img src="./img/DCF77_Signal_Scheme_wolles_elektronikkiste_de.png" width="450" height="350"/>
 </p>
 
 Fig1. DCF77 signal structure. Image courtesy of Wolfgang Ewald (see [1]).
@@ -40,7 +40,7 @@ Selected bit groups used by the decoder:
 - `36..57` date block, `58` parity P3
 
 <p align="center">
-<img src="./img/DCF77_Code_Brettoliver_org_uk.jpg" width="200" height="100"/>
+<img src="./img/DCF77_Code_Brettoliver_org_uk.jpg" width="400" height="300"/>
 </p>
 Fig2. DCF77 Bit specification, Image courtesy of brettoliver.org.uk (see [2])
 
