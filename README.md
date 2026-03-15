@@ -89,9 +89,10 @@ In our example, the number of 1s in bits `21–27` is odd (`3`). To make the tot
 ## Decoder Hardware Design Overview
 
 <p align="center">
-<img src="./img/DCF77_complete_and_back.jpg" width="700" height="600"/>
+<img src="./img/DCF77HWReceiver_1.png" width="400" height="400"/>
+<img src="./img/DCF77HWReceiver_2.png" width="400" height="400"/>
 </p>
-Fig4. DCF77 Receiver (see [6])
+Fig4. Original DCF77 Receiver Hardware.
 
 ## Decoder Software Design Overview
 
@@ -138,8 +139,6 @@ The program is organized into 3 logical layers:
 ### Information Flow
 
 `Pulse source (GPIO or simulation)` -> `_process_pulse` -> `decoder bit buffer` -> `minute marker` -> `decode()` -> `validated datetime output`
-
----
 
 ## System Requirements
 
