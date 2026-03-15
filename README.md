@@ -55,7 +55,7 @@ Selected bit groups used by the decoder:
 <p align="center">
 <img src="./img/DCF77_Code_Brettoliver_org_uk.jpg" width="700" height="600"/>
 </p>
-Fig3. DCF77 Bit specification, Image courtesy of brettoliver.org.uk (see [2])
+Fig3. DCF77 bit specification, Image courtesy of brettoliver.org.uk (see [2])
 
 Fields: Year, Month, Day, Hour, Minute are BCD encoded.
 
@@ -98,6 +98,12 @@ Fig4. Original DCF77 receiver hardware.
 <img src="./img/DCF77HW_modified_descr.png" width="300" height="400"/>
 </p>
 Fig5. Enhanced DCF77 receiver hardware, including an inductively coupled external antenna input.
+
+
+<p align="center">
+<img src="./img/Receiver_Schematics.png" width="600" height="400"/>
+</p>
+Fig6. DCF77 signal receiver schematics.
 
 ## Decoder Software Design Overview
 
