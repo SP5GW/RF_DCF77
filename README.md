@@ -89,8 +89,8 @@ In our example, the number of 1s in bits `21–27` is odd (`3`). To make the tot
 ## Decoder Hardware Design Overview
 
 <p align="center">
-<img src="./img/DCF77HWReceiver_1.png" width="400" height="400"/>
-<img src="./img/DCF77HWReceiver_2.png" width="400" height="400"/>
+<img src="./img/DCF77HWReceiver_1.png" width="300" height="300"/>
+<img src="./img/DCF77HWReceiver_2.png" width="300" height="300"/>
 </p>
 Fig4. Original DCF77 Receiver Hardware.
 
