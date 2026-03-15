@@ -92,7 +92,12 @@ In our example, the number of 1s in bits `21–27` is odd (`3`). To make the tot
 <img src="./img/DCF77HWReceiver_1.png" width="300" height="300"/>
 <img src="./img/DCF77HWReceiver_2.png" width="300" height="300"/>
 </p>
-Fig4. Original DCF77 Receiver Hardware.
+Fig4. Original DCF77 receiver hardware.
+
+<p align="center">
+<img src="./img/DCF77HWReceiver_1.png" width="300" height="300"/>
+</p>
+Fig5. Enhanced DCF77 receiver hardware, including an inductively coupled external antenna input.
 
 ## Decoder Software Design Overview
 
