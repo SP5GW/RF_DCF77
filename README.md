@@ -98,7 +98,7 @@ At my location (Otwock, Poland—a small city on the outskirts of Warsaw), it wa
 </p>
 Fig4. Original DCF77 receiver hardware.
 
-Therefore, I decided to add an external antenna port to allow connection of a random wire antenna. The simplest approach was to couple the external antenna magnetically using coil L2, wound on the same ferrite rod as coil L1, which forms part of the RC8000 module’s input LC tank (see Fig. 5).
+Therefore, I decided to add an external antenna port to allow connection of a random wire antenna. The simplest approach was to couple the external antenna magnetically using coil L2 (20 turns with 0.2DNE wire on paper former), wound on the same ferrite rod as coil L1, which forms part of the RC8000 module’s input LC tank (see Fig. 5).
 It should be noted that only the random wire antenna provided a noticeable improvement in signal reception. The use of a magnetic loop antenna did not result in any significant improvement.
 
 <p align="center">
