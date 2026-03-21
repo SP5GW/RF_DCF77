@@ -106,6 +106,15 @@ It should be noted that only the random wire antenna provided a noticeable impro
 </p>
 Fig5. Enhanced DCF77 receiver hardware, including an inductively coupled external antenna input.
 
+The charts below present the DCF77 frame detection success rate as a function of hour. Contrary to the common findings reported in the literature—which typically identify nighttime as the optimal reception window—I observed the highest probability of successful DCF77 signal reception near Warsaw, Poland between 08:00 and 15:00 CET.
+
+It should be noted that these measurements were collected over a relatively short period during March, and therefore may not fully capture longer-term propagation trends.
+
+<p align="center">
+<img src="./img/DCF77FrameDecodingSS.png" width="300" height="400"/>
+</p>
+Fig5. DCF77 Frame Decoding Success Rate (Otwock, Poland).
+
 ### DCF77 Receiver Module 
 
 <p align="center">
