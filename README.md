@@ -111,7 +111,7 @@ The charts below present the DCF77 frame detection success rate as a function of
 It should be noted that these measurements were collected over a relatively short period during March, and therefore may not fully capture longer-term propagation trends.
 
 <p align="center">
-<img src="./img/DCF77FrameDecodingSS.png" width="300" height="400"/>
+<img src="./img/DCF77FrameDecodingSS.png" width="600" height="500"/>
 </p>
 Fig5. DCF77 Frame Decoding Success Rate (Otwock, Poland).
 
