@@ -1,5 +1,5 @@
 
-# DCF77 Signal Reception and Decoding
+# DCF77 Signal Decoding: Letting AI Write the Python Implementation
 
 DCF77 is a German longwave time and frequency standard radio station operated by the Physikalisch-Technische Bundesanstalt (PTB). Transmitting continuously on 77.5 kHz from Mainflingen near Frankfurt am Main, it provides highly accurate time and date information for radio-controlled clocks across much of Europe. The station began operation as a standard-frequency service in 1959, with time and date encoding added in 1973. Its 50 kW transmitter radiates the signal via a T-antenna with very high annual availability. 
 
