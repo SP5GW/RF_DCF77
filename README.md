@@ -106,14 +106,23 @@ It should be noted that only the random wire antenna provided a noticeable impro
 </p>
 Fig5. Enhanced DCF77 receiver hardware, including an inductively coupled external antenna input.
 
-The charts below present the DCF77 frame detection success rate as a function of hour. Contrary to the common findings reported in the literature—which typically identify nighttime as the optimal reception window—I observed the highest probability of successful DCF77 signal reception near Warsaw, Poland between 08:00 and 15:00 CET.
-
-It should be noted that these measurements were collected over a relatively short period during March, and therefore may not fully capture longer-term propagation trends.
+The charts below show the DCF77 frame detection success rate as a function of local time. Contrary to commonly reported findings in the literature—which often identify nighttime as the optimal reception period—the highest probability of successful DCF77 reception near Warsaw, Poland was observed between 08:00 and 15:00 CET.
 
 <p align="center">
 <img src="./img/DCF77FrameDecodingSS.png" width="700" height="600"/>
 </p>
 Fig5. DCF77 Frame Decoding Success Rate (Otwock, Poland).
+
+The distance between Mainflingen and Otwock is approximately 885 km (see Fig. 6) [6]. This places the receiver within the transition region where both groundwave and skywave components contribute to the received signal. During daytime, the groundwave component dominates due to ionospheric absorption of the skywave, resulting in relatively stable reception conditions (see Fig. 7) [6].
+
+At night, however, the ionospheric D-layer weakens, allowing the skywave component—of comparable strength at this distance—to propagate and interfere with the groundwave. This leads to amplitude fading and waveform distortion, which can significantly degrade the reliability of DCF77 frame decoding. This mechanism provides a plausible explanation for the reduced reception performance observed during nighttime.
+
+<p align="center">
+<img src="./img/DCF77SignalReach.png" width="400" height="500"/>
+<img src="./img/DCF77_FieldStrength.png" width="400" height="500"/>
+</p>
+
+It should be noted that these measurements were collected over a relatively short period in March and may therefore not be fully representative of longer-term reception conditions.
 
 ### DCF77 Receiver Module 
 
@@ -277,3 +286,5 @@ This setup filters the decoder output to show only valid timestamps, saves them 
 [4] DCF77 wikipedia article, https://en.wikipedia.org/wiki/DCF77
 
 [5] Physikalisch-Technische Bundesanstalt (PTB), https://www.ptb.de/cms/en/ptb/fachabteilungen/abt4/fb-44/ag-442/dissemination-of-legal-time/dcf77.html
+
+[6] ITU-R Report TF.2487-0 (09/2021) Protection Criteria for Systems in the Standard Frequency and Time Signal Services.
