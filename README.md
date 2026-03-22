@@ -122,6 +122,11 @@ At night, however, the ionospheric D-layer weakens, allowing the skywave compone
 <img src="./img/DCF77_FieldStrength.png" width="400" height="500"/>
 </p>
 
+Figure 5. Schematic representation of the DCF77 transmission coverage area. Courtesy of ITU [6].
+
+Figure 6. Field strengths of the ground wave and of the sky wave as a function of the distance d from the place of transmission, 
+calculated based on ITU-Reports specified in the text, assuming an irradiated power of 30 kW. Courtesy of ITU [6].
+
 It should be noted that these measurements were collected over a relatively short period in March and may therefore not be fully representative of longer-term reception conditions.
 
 ### DCF77 Receiver Module 
