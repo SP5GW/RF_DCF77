@@ -23,23 +23,23 @@ It is also worth noting that a fully functional implementation was already produ
 
 **Prompt 1:**
 
-*uzywam raspberry pi do dekodowania sygnalu czasu DCF-77. Impulsy chcę odbierać na jednym z pinów GPIO. Napisz mi program który odczyta dane DCF-77*
+>>*uzywam raspberry pi do dekodowania sygnalu czasu DCF-77. Impulsy chcę odbierać na jednym z pinów GPIO. Napisz mi program który odczyta dane DCF-77*
 
 **Prompt 2:**
 
-*przygotuj wersje z trybem --simulate*
+>>*przygotuj wersje z trybem --simulate*
 
 **Prompt 3:**
 
-*can you now modify code so all comments and printouts are in english instead of polish. also modify printouts: Bit 01: 0 (100.0 ms) so reader understands what bit groups are being received at the moment for example time, date, control sum etc.*
+>>*can you now modify code so all comments and printouts are in english instead of polish. also modify printouts: Bit 01: 0 (100.0 ms) so reader understands what bit groups are being received at the moment for example time, date, control sum etc.*
 
 **Prompt 4:**
 
-*output printouts looks good but for decoded content can you please print so description text takes always x number of characters which means that bit value always is printed in the same column*
+>>*output printouts looks good but for decoded content can you please print so description text takes always x number of characters which means that bit value always is printed in the same column*
 
 **Prompt 5:**
 
-*you are confusing please change bit numbering in the printout to start from 0 and doublecheck time setting winter/summer then provide me py file*
+>>*you are confusing please change bit numbering in the printout to start from 0 and doublecheck time setting winter/summer then provide me py file*
 
 After moving to the target hardware (Raspberry Pi), I ran the code for several days, and it performed flawlessly.
 
