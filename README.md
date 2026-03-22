@@ -21,8 +21,8 @@ To my surprise, after just five prompts I obtained fully working code that requi
 
 It is also worth noting that a fully functional implementation was already produced after the second prompt.
 
-**Prompt 1:**
-"uzywam raspberry pi do dekodowania sygnalu czasu DCF-77. Impulsy chcę odbierać na jednym z pinów GPIO. Napisz mi program który odczyta dane DCF-77"
+**Prompt 1:
+uzywam raspberry pi do dekodowania sygnalu czasu DCF-77. Impulsy chcę odbierać na jednym z pinów GPIO. Napisz mi program który odczyta dane DCF-77
 
 **Prompt 2:**
 "przygotuj wersje z trybem --simulate"
