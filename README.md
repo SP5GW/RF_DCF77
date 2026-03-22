@@ -9,14 +9,39 @@ DCF77 is a German longwave time and frequency standard radio station operated by
 
 Fig1. DCF77 Transmission Site at Mainflingen, Germany.
 
-
 For more details, see Wikipedia [4] or PTB webpage [5].
 
 Live DCF77 data can be viewed at [3].
 
+Over the years, many articles have been published describing both the DCF77 transmission protocol and various decoder software implementations. I considered implementing a Python-based decoder to be an excellent challenge for AI, as well as a practical way to assess its current programming capabilities. My goal was to achieve a fully working implementation using the minimum number of prompts.
+
+I chose OpenAI’s Codex as the implementation platform.
+
+To my surprise, after just five prompts I obtained fully working code that required no modifications. Moreover, after the second prompt I switched the interaction language from Polish to English, which had no impact on the quality of the generated code and did not introduce any unnecessary changes.
+
+It is also worth noting that a fully functional implementation was already produced after the second prompt.
+
+Prompt 1:
+"uzywam raspberry pi do dekodowania sygnalu czasu DCF-77. Impulsy chcę odbierać na jednym z pinów GPIO. Napisz mi program który odczyta dane DCF-77"
+
+Prompt 2:
+"przygotuj wersje z trybem --simulate"
+
+Prompt 3:
+"can you now modify code so all comments and printouts are in english instead of polish. also modify printouts: Bit 01: 0 (100.0 ms) so reader understands what bit groups are being received at the moment for example time, date, control sum etc."
+
+Prompt 4:
+"output printouts looks good but for decoded content can you please print so description text takes always x number of characters which means that bit value always is printed in the same column"
+
+Prompt 5:
+"you are confusing please change bit numbering in the printout to start from 0 and doublecheck time setting winter/summer then provide me py file"
+
+
+After moving to target hardware (Raspberry Pi), I have run the code for several days and it performed without a glitch!
+
 ## General Description
 
-`RF_DCF77` is a standalone Python decoder for the DCF77 longwave time signal.
+RF_DCF77 is a standalone Python decoder for the DCF77 longwave time signal, implemented entirely by Codex, with no human-written code.
 It can run in two modes:
 
 - **Hardware mode (Raspberry Pi):** reads real pulse edges from a DCF77 receiver module connected to a GPIO pin.
