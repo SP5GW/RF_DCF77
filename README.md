@@ -41,8 +41,7 @@ It is also worth noting that a fully functional implementation was already produ
 
 *you are confusing please change bit numbering in the printout to start from 0 and doublecheck time setting winter/summer then provide me py file*
 
-
-After moving to target hardware (Raspberry Pi), I have run the code for several days and it performed without a glitch!
+After moving to the target hardware (Raspberry Pi), I ran the code for several days, and it performed flawlessly.
 
 ## General Description
 
