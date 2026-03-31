@@ -294,12 +294,11 @@ The decoding process can be interrupted at any time by pressing:
 
 This safely stops the program and returns to the shell.
 
-
 ### Processing Decoder Output
 
 To limit the decoder output to only successfully decoded timestamps (which are also written to a text file: decoded_time.txt), you can use the following command:
 
-python -u ./dcf77_gpio.py --pin 25 --active-high --min-pulse-ms 30 | grep --color=always --line-buffered "Decoded" | tee -a decoded_time.txt 
+`python -u ./dcf77_gpio.py --pin 25 --active-high --min-pulse-ms 30 | grep --color=always --line-buffered "Decoded" | tee -a decoded_time.txt`
 
 This command filters the decoder output and show only valid timestamps. Output is also saved to decoded_time.txt file.
 
