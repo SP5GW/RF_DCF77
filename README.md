@@ -307,8 +307,11 @@ This command filters the decoder output and show only valid timestamps. Output i
 In most European countries, including Germany, the transition to daylight saving time occurs on the last Sunday of March, when clocks are advanced from 02:00 to 03:00 local time. This marks the change from winter time (CET, UTC+1) to summer time (CEST, UTC+2). This transition was captured live by our decoder, as shown below.
 
 Decoded DCF77 time: 2026-03-28 21:22 CET
+
 Decoded DCF77 time: 2026-03-28 21:37 CET
+
 Decoded DCF77 time: 2026-03-29 03:17 CEST
+
 Decoded DCF77 time: 2026-03-29 03:22 CEST
 
 # References
