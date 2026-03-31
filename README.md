@@ -297,17 +297,11 @@ This safely stops the program and returns to the shell.
 
 ### Processing Decoder Output
 
-To limit the decoder output to only successfully decoded timestamps (which are also written to a text file), you can use the following workflow with two terminal windows:
+To limit the decoder output to only successfully decoded timestamps (which are also written to a text file: decoded_time.txt), you can use the following command:
 
-Terminal 1:
+python -u ./dcf77_gpio.py --pin 25 --active-high --min-pulse-ms 30 | grep --color=always --line-buffered "Decoded" | tee -a decoded_time.txt 
 
-`python dcf77_gpio.py | grep "Decoded DCF77 time:" | tee -a decoded.txt`
-
-Terminal 2:
-
-`tail -n 10 -f decoded.txt`
-
-This setup filters the decoder output to show only valid timestamps, saves them to decoded.txt, and continuously displays the most recent 10 entries.
+This command filters the decoder output and show only valid timestamps. Output is also saved to decoded_time.txt file.
 
 # References
 
